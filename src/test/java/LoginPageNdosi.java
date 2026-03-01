@@ -45,6 +45,14 @@ public class LoginPageNdosi {
 
     driver.findElement(By.xpath("//*[@id=\"address\"]")).sendKeys("123 Mayfair");
     driver.findElement(By.id("inventory-next-btn")).click();
+    driver.findElement(By.xpath("//*[@id=\"shipping-option-express\"]")).click();
+    driver.findElement(By.xpath("//*[@id=\"warranty-option-1yr\"]")).click();
+    driver.findElement(By.id("discount-code")).sendKeys("save10");
+    driver.findElement(By.id("apply-discount-btn")).click();
+    driver.findElement(By.id("purchase-device-btn")).click();
+    Thread.sleep(1000);
+    driver.findElement((By.id("view-history-btn"))).click();
+
 
 
 
