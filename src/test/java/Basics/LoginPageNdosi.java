@@ -19,7 +19,7 @@ public class LoginPageNdosi {
         driver.findElement(By.id("login-email")).sendKeys("dust.attack@gmail.com");
         driver.findElement(By.id("login-password")).sendKeys("@12345678");
         driver.findElement(By.id("login-submit")).click();
-        Thread.sleep(3000);
+        Thread.sleep(4000);
 
         driver.findElement(By.xpath("//*[@id=\"app-root\"]/nav/div[1]/div[2]/div[1]/button/span[2]")).click();
         driver.findElement(By.xpath("//*[@id=\"app-root\"]/nav/div[1]/div[2]/div[1]/div/button[2]/span[2]")).click();
