@@ -7,11 +7,11 @@ import org.slf4j.LoggerFactory;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-@Test(dataProvider = "testdata")
 public class LoginTest extends BaseTest {
 
     private static final Logger log = LoggerFactory.getLogger(LoginTest.class);
 
+    @Test(dataProvider = "testdata")
     public void LoginWithValidDetails(String email, String password) throws InterruptedException{
         loginPage.clickLoginButton();
         loginPage.enterEmailAddress(email);
@@ -19,22 +19,22 @@ public class LoginTest extends BaseTest {
         loginPage.clickSubmitButton();
         loginPage.verifyLoginSuccess("Here's who's working today");
 
-        loginPage.clickLearnButton();
-        loginPage.clickLearningMaterial();
-        loginPage.clickWebAutomationBtn();
-        loginPage.clickDeviceType();
-        loginPage.clickBrandType();
-        loginPage.clickStorageSize();
-        loginPage.clickColor();
-       loginPage.clickQuantity("2");
-       loginPage.enterAddress("123 Mayfair");
-        loginPage.clickNextButton();
-        loginPage.clickShippingMode();
-        loginPage.clickWarrantOption();
-        loginPage.enterDiscountCode("save10");
-        loginPage.clickDiscountBtn();
-        loginPage.clickPurchaseDevice();
-        loginPage.clickInvoiceBtn();
+        invetoryPage.clickLearnButton();
+        invetoryPage.clickLearningMaterial();
+        invetoryPage.clickWebAutomationBtn();
+        invetoryPage.clickDeviceType();
+        invetoryPage.clickBrandType();
+        invetoryPage.clickStorageSize();
+        invetoryPage.clickColor();
+        invetoryPage.clickQuantity("2");
+        invetoryPage.enterAddress("123 Mayfair");
+        invetoryPage.clickNextButton();
+        invetoryPage.clickShippingMode();
+        invetoryPage.clickWarrantOption();
+        invetoryPage.enterDiscountCode("save10");
+        invetoryPage.clickDiscountBtn();
+        invetoryPage.clickPurchaseDevice();
+        invetoryPage.clickInvoiceBtn();
 
 
     }

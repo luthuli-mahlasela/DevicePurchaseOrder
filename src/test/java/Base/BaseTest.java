@@ -1,5 +1,6 @@
 package Base;
 
+import Pages.InvetoryPage;
 import Pages.LoginPage;
 import Utilities.BrowserFactory;
 import org.openqa.selenium.WebDriver;
@@ -13,14 +14,14 @@ public class BaseTest {
 
     public WebDriver driver;
     public LoginPage loginPage;
+    public InvetoryPage invetoryPage;
 
 
     @BeforeClass
     public void setUp() {
         driver = browserFactory.startBrowser(browserChoice,url);
         loginPage= new LoginPage(driver);
-
-
+        invetoryPage = new InvetoryPage(driver);
     }
     @AfterClass
     public void tearDown(){
