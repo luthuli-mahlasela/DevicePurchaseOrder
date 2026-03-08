@@ -1,6 +1,7 @@
 package Pages;
 
 import Base.BaseTest;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -68,12 +69,16 @@ public class InvetoryPage {
     @FindBy(id="purchase-device-btn")
     WebElement PurchaseDeviseBtn;
 
-    @FindBy(id="view-history-btn")
+    @FindBy (id = "view-history-btn")
     WebElement InvoiceBtn;
+
+    @FindBy(css = "button[id^='view-invoice-INV']")
+    WebElement ViewInvoice;
 
     public void clickLearnButton(){
         wait.until(ExpectedConditions.visibilityOf(LearnButton));
         LearnButton.click();
+
     }
     public void clickLearningMaterial(){
         wait.until(ExpectedConditions.visibilityOf(LearningMaterialButton));
@@ -135,9 +140,17 @@ public class InvetoryPage {
     public void clickPurchaseDevice(){
         PurchaseDeviseBtn.click();
     }
+
+
+
     public void clickInvoiceBtn(){
-        wait.until(ExpectedConditions.visibilityOf(InvoiceBtn));
-        InvoiceBtn.click();
+       wait.until(ExpectedConditions.elementToBeClickable(InvoiceBtn));
+       InvoiceBtn.click();
+    }
+    public void clickViewInvoice(){
+        wait.until(ExpectedConditions.visibilityOf(ViewInvoice));
+        ViewInvoice.click();
+
     }
 
 }

@@ -34,7 +34,12 @@ public class LoginTest extends BaseTest {
         invetoryPage.enterDiscountCode("save10");
         invetoryPage.clickDiscountBtn();
         invetoryPage.clickPurchaseDevice();
+        Thread.sleep(2000);
         invetoryPage.clickInvoiceBtn();
+
+        // Click invoice button and switch to the new tab
+        invetoryPage.clickViewInvoice();
+
 
 
     }
